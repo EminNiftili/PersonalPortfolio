@@ -1,0 +1,13 @@
+{
+  "app-module": {
+    "header" : {
+      "headerMenuFirst" : "Work",
+      "headerMenuSecond" : "Project",
+      "headerMenuThird" : "About",
+      "headerMenuFourth" : "Contact"
+    },
+    "firstMainBlock" : {
+      "entryText" : "// I develop software application. //"
+    }
+  }
+}

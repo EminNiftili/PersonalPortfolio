@@ -7,6 +7,10 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoadingPageComponent } from './components/loading-page/loading-page.component';
 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +20,21 @@ import { LoadingPageComponent } from './components/loading-page/loading-page.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader :{
+        provide : TranslateLoader,
+        useFactory : httpTranslateLoader,
+        deps : [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  }
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

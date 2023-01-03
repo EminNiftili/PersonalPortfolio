@@ -1,0 +1,13 @@
+{
+  "app-module" : {
+    "header" : {
+      "headerMenuFirst" : "Özet",
+      "headerMenuSecond" : "Projelerim",
+      "headerMenuThird" : "Hakkımda",
+      "headerMenuFourth" : "İletişim"
+    },
+    "firstMainBlock" : {
+      "entryText" : "// İstenilen ara yüzde uygulam geliştire biliyorum //"
+    }
+  }
+}
